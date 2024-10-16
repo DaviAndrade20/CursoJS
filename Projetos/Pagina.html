@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        #Centro {
+            text-align: center;
+            font-size: 150px;
+            margin-top: 190px;
+        }
+        #Canto {
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute; /* Posiciona ele de forma absoluta em todo formato de tela */
+            top: 1px; /* Distancia do topo */
+            right: 200px; /* Distancia da direita */
+        }
+        #Outro {
+            font-size: 18px;
+            font-weight: normal;
+            position: absolute;
+            top: 1px;
+            right: 110px;
+        }
+        #searchBar {
+            margin-top: -70px;
+            text-align: center;
+            
+        }
+        input[type="search"] {
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            width: 450px;
+        }
+        .Imagem-logo {
+            width: 60px;
+            height: 50px;
+            position: absolute;
+            top: 15px;
+            right: 30px;
+        }
+        #Detalhe {
+            font-weight: normal;
+            font-size: 20px;
+            position: absolute;
+            bottom: -1px;
+        }
+        #Detalhe-dois {
+            font-weight: normal;
+            font-size: 20px;
+            position: absolute;
+            right: 30px;
+            top: 589px;
+        }
+
+         </style>
+</head>
+<body>
+    <h1 id="Centro">Doodle</h1>
+    <script>
+        // Cores para cada letra
+        const cores = ['#4285F4', '#EA4335', '#FBBC05', '#34A853', '#4285F4', '#EA4335'];
+
+        // Obtém o elemento h1
+        const h1 = document.getElementById('Centro');
+
+        // Divide o texto em letras, aplicando cores
+        h1.innerHTML = h1.innerText.split('').map((letra, index) => {
+            return `<span style="color: ${cores[index]}">${letra}</span>`;
+        }).join('');
+        </script>
+        <h5 id="Canto"><a href="https://www.microsoft.com/pt-br/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f&sdf=0" style="text-decoration: none; color: black;">Email</a></h5>
+        <h5 id="Outro"><a href="https://www.bing.com/images/search?q=imagens&form=HDRSC3&first=1" style="text-decoration: none; color: black;">Imagens</a></h5>
+        <div id="searchBar">
+            <input type="search" placeholder="Pesquisar...">
+        </div>
+        <img class="Imagem-logo"
+        src ='https://th.bing.com/th/id/OIP.Zt1wO00kA_0kskG2zhqrNQHaHa?rs=1&pid=ImgDetMain' alt="logo">
+        <h5 id="Detalhe">Brasil</h5>
+        <h5 id="Detalhe-dois">Português-BR</h5>
+    </body>
+</html>
